@@ -14,3 +14,4 @@ ZSH_THEME="af-magic"
 plugins=(git git-flow ruby gem rails bower bundler common-aliases jsontools npm zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+
