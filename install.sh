@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/local/bin/zsh
 
 set -u
 
-# 実行場所のディレクトリを取得
+# exec DIR
 THIS_DIR=$(cd $(dirname $0); pwd)
 
 cd $THIS_DIR
@@ -13,7 +13,7 @@ echo "start setup..."
 for f in .??*; do
     [ "$f" = ".git" ] && continue
     [ "$f" = ".gitignore" ] && continue
-    [ "$f" = ".gitconfig.local.template" ] && continue
+#    [ "$f" = ".gitconfig.local.template" ] && continue
 #    [ "$f" = ".require_oh-my-zsh" ] && continue
     [ "$f" = ".gitmodules" ] && continue
 
@@ -22,13 +22,11 @@ done
 
 [ -e ~/.gitconfig.local ] || cp ~/dotfiles/.gitconfig.local.template ~/.gitconfig.local
 
-# emacs set up
-# if which cask >/dev/null 2>&1; then
-#   echo "setup .emacs.d..."
-#   cd ${THIS_DIR}/.emacs.d
-#   cask upgrade
-#   cask install
-# fi
+# zprezto
+setopt EXTENDED_GLOB
+for rcfile in ~/dotfiles/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
 
 cat << END
 
