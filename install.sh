@@ -7,9 +7,9 @@ THIS_DIR=$(cd $(dirname $0); pwd)
 cd $THIS_DIR
 
 # submodule update
-git submodule init
-git submodule update
-# git submodule update --init --recursive
+# git submodule init
+# git submodule update
+git submodule update --init --recursive
 
 echo "start setup..."
 # dotfiles link
