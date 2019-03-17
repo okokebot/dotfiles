@@ -4,13 +4,15 @@ set -u
 
 # exec DIR
 THIS_DIR=$(cd $(dirname $0); pwd)
-
 cd $THIS_DIR
-# git submodule init
-# git submodule update
-git submodule update --init --recursive
+
+# submodule update
+git submodule init
+git submodule update
+# git submodule update --init --recursive
 
 echo "start setup..."
+# dotfiles link
 for f in .??*; do
     [ "$f" = ".git" ] && continue
     [ "$f" = ".gitignore" ] && continue
@@ -26,7 +28,7 @@ done
 # zprezto
 setopt EXTENDED_GLOB
 for rcfile in ~/dotfiles/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+    ln -snfv "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
 cat << END
