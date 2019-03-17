@@ -23,11 +23,12 @@ for f in .??*; do
     ln -snfv ~/dotfiles/"$f" ~/
 done
 
-[ -e ~/.gitconfig.local ] || cp ~/dotfiles/.gitconfig.local.template ~/.gitconfig.local
+# [ -e ~/.gitconfig.local ] || cp ~/dotfiles/.gitconfig.local.template ~/.gitconfig.local
 
 # zprezto
 setopt EXTENDED_GLOB
-for rcfile in ~/dotfiles/.zprezto/runcoms/^README.md(.N); do
+for rcfile in ${ZDOTDIR:-$HOME}/.zprezto/runcoms/??*; do
+    [ "$rcfile" = "^README.md" ] && continue
     ln -snfv "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
