@@ -6,8 +6,9 @@ set -u
 THIS_DIR=$(cd $(dirname $0); pwd)
 
 cd $THIS_DIR
-git submodule init
-git submodule update
+# git submodule init
+# git submodule update
+git submodule update --init --recursive
 
 echo "start setup..."
 for f in .??*; do
