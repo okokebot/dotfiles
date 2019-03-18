@@ -9,6 +9,7 @@ cd $THIS_DIR
 # submodule update
 git submodule update --init --recursive
 git submodule foreach git pull origin master
+git submodule foreach git checkout master
 
 echo "start setup..."
 # dotfiles link
