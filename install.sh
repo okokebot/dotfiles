@@ -8,6 +8,7 @@ cd $THIS_DIR
 
 # submodule update
 git submodule update --init --recursive
+git submodule foreach git pull origin master
 
 echo "start setup..."
 # dotfiles link
@@ -28,11 +29,6 @@ for rcfile in ${ZDOTDIR:-$HOME}/.zprezto/runcoms/??*; do
     [ "$rcfile" = "^README.md" ] && continue
     ln -snfv "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
-
-# powerline font
-cd ${ZDOTDIR:-$HOME}/dotfiles/powerline_font
-chmod +x install.sh
-./install.sh
 
 cat << END
 
