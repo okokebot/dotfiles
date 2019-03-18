@@ -29,10 +29,17 @@ for rcfile in ${ZDOTDIR:-$HOME}/.zprezto/runcoms/??*; do
     ln -snfv "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
+# powerline font
+cd ${ZDOTDIR:-$HOME}/dotfiles/powerline_font
+chmod +x install.sh
+./install.sh
+
 cat << END
 
 **************************************************
-DOTFILES SETUP FINISHED! RESTART SHELL.
+DOTFILES SETUP FINISHED!
+CHANGE ITERM2 FONT POWERLINE
+RESTART SHELL.
 **************************************************
 
 END
