@@ -26,7 +26,7 @@ done
 setopt EXTENDED_GLOB
 for rcfile in ${ZDOTDIR:-$HOME}/.zprezto/runcoms/??*; do
     # except "README.md" but not work
-    [ "$rcfile" = "README.md" ] && continue
+    [ "$rcfile" = "${ZDOTDIR:-$HOME}/.zprezto/runcoms/README.md" ] && continue
 
     ln -snfv "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
