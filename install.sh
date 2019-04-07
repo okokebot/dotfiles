@@ -16,18 +16,18 @@ echo "start setup..."
 for f in .??*; do
     [ "$f" = ".git" ] && continue
     [ "$f" = ".gitignore" ] && continue
-#    [ "$f" = ".gitconfig.local.template" ] && continue
     [ "$f" = ".gitmodules" ] && continue
+    [ "$f" = ".DS_Store" ] && continue
 
     ln -snfv ~/dotfiles/"$f" ~/
 done
 
-# [ -e ~/.gitconfig.local ] || cp ~/dotfiles/.gitconfig.local.template ~/.gitconfig.local
-
 # zprezto
 setopt EXTENDED_GLOB
 for rcfile in ${ZDOTDIR:-$HOME}/.zprezto/runcoms/??*; do
-    [ "$rcfile" = "^README.md" ] && continue
+    # except "README.md" but not work
+    [ "$rcfile" = "README.md" ] && continue
+
     ln -snfv "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
