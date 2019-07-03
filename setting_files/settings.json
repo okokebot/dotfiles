@@ -1,0 +1,25 @@
+// settings.json for VSCode
+// https://www.atmarkit.co.jp/ait/articles/1810/19/news032.html
+
+{
+    "window.zoomLevel": 2,
+    "[plaintext]": {    
+    },
+
+    "workbench.colorTheme": "Monokai Seti",
+
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#89bcd63b"
+    },
+
+    "[ruby]": {
+        "editor.tabSize": 2
+    },
+    "emmet.includeLanguages": {
+        "erb": "html",
+        "vue": "html",
+        "vue": "css",
+    },
+
+    "highlight-matching-tag.enabled": true
+}
