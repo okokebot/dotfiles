@@ -1,25 +1,138 @@
+// https: //qiita.com/WGG_SH/items/82f83ba91ca0d7f5c8b7
 // settings.json for VSCode
 // https://www.atmarkit.co.jp/ait/articles/1810/19/news032.html
-
+// https: //qiita.com/sensuikan1973/items/74cf5383c02dbcd82234
+// ❯❯❯ code --list-extensions | xargs -L 1 echo code --install-extention
+// code --install-extention adityavm.vscode-monokai-seti
+// code --install-extention chrmarti.regex
+// code --install-extention CoenraadS.bracket-pair-colorizer
+// code --install-extention DavidAnson.vscode-markdownlint
+// code --install-extention donjayamanne.githistory
+// code --install-extention EditorConfig.EditorConfig
+// code --install-extention esbenp.prettier-vscode
+// code --install-extention GitHub.vscode-pull-request-github
+// code --install-extention GrapeCity.gc-excelviewer
+// code --install-extention IBM.output-colorizer
+// code --install-extention ionutvmi.path-autocomplete
+// code --install-extention MS-CEINTL.vscode-language-pack-ja
+// code --install-extention rebornix.ruby
+// code --install-extention shardulm94.trailing-spaces
+// code --install-extention wayou.vscode-todo-highlight
 {
-    "window.zoomLevel": 2,
-    "[plaintext]": {    
-    },
-
-    "workbench.colorTheme": "Monokai Seti",
-
-    "workbench.colorCustomizations": {
-        "editor.selectionBackground": "#89bcd63b"
-    },
-
-    "[ruby]": {
-        "editor.tabSize": 2
-    },
-    "emmet.includeLanguages": {
-        "erb": "html",
-        "vue": "html",
-        "vue": "css",
-    },
-
-    "highlight-matching-tag.enabled": true
+  // window setting
+  "window.zoomLevel": 0,
+  "window.title": "${dirty}${activeEditorShort} / ${rootName}", // タイトルバーの文字
+  "window.closeWhenEmpty": false,
+  // editor setting
+  "editor.codeLens": false,
+  "editor.wordWrap": "on", // 右端で折り返す
+  "editor.tabSize": 2,
+  "editor.lineHeight": 28,
+  "editor.detectIndentation": false,
+  "editor.renderLineHighlight": "all", // 選択中の行を強調する
+  // "editor.fontFamily": "'Roboto Mono'", // フォント
+  "editor.glyphMargin": true, // 行の左端に余白を作る
+  "editor.roundedSelection": true, // 選択範囲の角を丸める
+  "editor.quickSuggestions": {
+    "comments": false, // コメント内では無効
+    "strings": true, // 文字列内では有効
+    "other": true //  その他の場所で有効
+  }, // 補完候補の自動表示
+  "editor.formatOnType": true, // コード整形
+  "editor.formatOnPaste": true, // コード整形
+  // "editor.rulers": [100], // 右端のルーラー位置
+  "editor.folding": true, // コードの折りたたみを許可
+  "editor.letterSpacing": -1, // 文字の間隔を詰める
+  "editor.lineNumbers": "on", // 行番号の表示
+  "editor.minimap.enabled": true, // ミニマップの表示
+  "editor.minimap.maxColumn": 40, // ミニマップの幅
+  "editor.scrollBeyondLastLine": true, // 最終行よりも下へのスクロールを許可
+  "editor.renderControlCharacters": true, // 制御文字の表示
+  "editor.renderWhitespace": "boundary", // 連続した空白文字を可視化
+  "editor.insertSpaces": true, // Tabキーで半角スペースを入力
+  "editor.fontSize": 16, //  文字サイズ
+  "editor.renderIndentGuides": true, // インデントのガイドラインを表示
+  "editor.minimap.renderCharacters": false, // ミニマップを簡略化
+  "editor.minimap.showSlider": "always", // ミニマップのハイライトを常に表示
+  "editor.minimap.side": "right", // ミニマップを右に表示
+  "editor.autoIndent": false, // オートインデント
+  "editor.cursorStyle": "line", // カーソルの形状
+  "editor.cursorBlinking": "phase", // カーソルの表示形式
+  "terminal.integrated.cursorBlinking": true, // terminal カーソルの表示方法
+  "editor.cursorWidth": 4, // カーソル幅
+  "editor.emptySelectionClipboard": true, // 選択範囲無しでのコピーを許可
+  "editor.links": true, // リンクをクリック可能に
+  "editor.matchBrackets": true, // 対応する括弧の強調表示をオンに
+  "editor.mouseWheelScrollSensitivity": 0.7, // マウスホイール回転の移動係数
+  "editor.mouseWheelZoom": false, // Ctrl+マウスホイールによるズームを無効化
+  "editor.suggestFontSize": 24, // サジェストの文字サイズ
+  "editor.suggestLineHeight": 24, // サジェスト欄の行の高さ
+  "terminal.integrated.fontSize": 15, // ターミナル フォントサイズ
+  // ファイル設定
+  "files.autoSave": "off", //ダーティファイルの作成を無効
+  "files.eol": "\n", // 改行コードをLF(Linux/OSX)にする
+  "files.insertFinalNewline": true, // ファイルの終端に空の行を追加
+  "files.autoGuessEncoding": true, // 文字コードを自動判別
+  // エクスプローラーから除外するファイルとフォルダ
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/bin": true,
+    "**/*.exe": true,
+    "**/*.o": true,
+    "**/*.obj": true,
+    "**/*.ilk": true,
+    "**/*.pdb": true,
+    "**/*.tlog": true,
+    "**/*.idb": true,
+    "**/*.dll": true
+  },
+  // ワークベンチ設定
+  "workbench.editor.showTabs": true, // タブを表示
+  "workbench.activityBar.visible": true, // アクティビティバー(左端)を非表示に
+  "workbench.editor.tabSizing": "shrink", // タブが多い場合,文字を非表示にしてもタブ表示を優先する
+  "workbench.statusBar.visible": true, // ステータスバー(下端)を表示
+  "workbench.sideBar.location": "left", // サイドバーを左に
+  "workbench.colorTheme": "Monokai Seti", // カラーテーマ
+  "workbench.iconTheme": "Monokai Pro Icons", // アイコンの適用
+  "workbench.startupEditor": "newUntitledFile", // 起動時の表示ファイル
+  "workbench.colorCustomizations": { // カラーテーマに上書きする個別の設定
+    "editorCursor.foreground": "#b0f709",
+    "terminalCursor.foreground": "#b0f709",
+    "editor.findMatchBackground": "#00000000", // 現在の検索一致結果の表示色
+    "editor.findMatchBorder": "#bee60eef", // 現在の検索一致結果の表示色
+    "editor.findMatchHighlightBackground": "#a8e940", // 検索一致結果の表示色
+  },
+  "highlight-matching-tag.enabled": true,
+  // 画面の透過設定
+  "glassit.alpha": 250,
+  "glassit.step": 1,
+  // 拡張機能
+  "extensions.autoUpdate": true, // 自動更新
+  "extensions.ignoreRecommendations": false, // 推奨事項の通知をOFF
+  // markdown
+  "markdown.preview.breaks": true, // 改行を反映
+  "markdown.preview.fontSize": 20, // 文字サイズ
+  "markdown.preview.lineHeight": 1.1, // 行幅
+  "markdown.styles": [
+    "~/markdown_pdf.css",
+  ],
+  // markdown-pdf
+  "markdown-pdf.convertOnSave": false, // 保存時に自動でpdf化しない
+  "markdown-pdf.type": "pdf", // PDFで出力
+  "markdown-pdf.styles": [
+    "~/markdown_pdf.css",
+  ],
+  "[ruby]": {
+    "editor.tabSize": 2
+  },
+  "emmet.includeLanguages": {
+    "erb": "html",
+    "vue": "html",
+    "vue": "css",
+  },
+  "git.ignoreLegacyWarning": true
 }
