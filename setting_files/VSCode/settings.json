@@ -26,7 +26,16 @@
   // editor setting
   "editor.codeLens": false,
   "editor.wordWrap": "on", // 右端で折り返す
-  "editor.tabSize": 2,
+  // "editor.tabSize": 2,
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[python]": {
+    "editor.tabSize": 4
+  },
+  "[ruby]": {
+    "editor.tabSize": 2
+  },
   "editor.lineHeight": 28,
   "editor.detectIndentation": false,
   "editor.renderLineHighlight": "all", // 選択中の行を強調する
