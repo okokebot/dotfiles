@@ -26,7 +26,7 @@
   // editor setting
   "editor.codeLens": false,
   "editor.wordWrap": "on", // 右端で折り返す
-  // "editor.tabSize": 2,
+  "editor.tabSize": 2,
   "[javascript]": {
     "editor.tabSize": 2
   },
