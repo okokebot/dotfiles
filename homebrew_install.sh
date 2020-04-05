@@ -35,11 +35,11 @@ formulas=(
     sqlite
     markdown
     ssh-copy-id
-
     autoconf
     kubectx
     kubenetes-cli
     kubenetes-helm
+    kube-ps1
 )
 
 "brew tap..."
