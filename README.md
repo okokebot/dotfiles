@@ -8,7 +8,7 @@
         - bettertouchtool, google-chrome, slack etc...
 
 ## install.sh
-- `chomod +x install.sh`
+- `chmod +x install.sh`
 - `./install.sh`
 - make dotfiles link in homedir
     - bash
