@@ -8,6 +8,7 @@
 // code --install-extention CoenraadS.bracket-pair-colorizer
 // code --install-extention DavidAnson.vscode-markdownlint
 // code --install-extention donjayamanne.githistory
+// code --install-extention dsznajder.es7-react-js-snippets
 // code --install-extention EditorConfig.EditorConfig
 // code --install-extention esbenp.prettier-vscode
 // code --install-extention GitHub.vscode-pull-request-github
@@ -15,12 +16,16 @@
 // code --install-extention IBM.output-colorizer
 // code --install-extention ionutvmi.path-autocomplete
 // code --install-extention MS-CEINTL.vscode-language-pack-ja
+// code --install-extention msjsdiag.vscode-react-native
 // code --install-extention rebornix.ruby
+// code --install-extention ritwickdey.live-sass
+// code --install-extention ritwickdey.LiveServer
 // code --install-extention shardulm94.trailing-spaces
+// code --install-extention tokiedokie.reveal-markdown
 // code --install-extention wayou.vscode-todo-highlight
+// code --install-extention wingrunr21.vscode-ruby
+
 {
-  // window setting
-  "window.zoomLevel": 0,
   "window.title": "${dirty}${activeEditorShort} / ${rootName}", // タイトルバーの文字
   "window.closeWhenEmpty": false,
   // editor setting
@@ -112,8 +117,10 @@
     "editorCursor.foreground": "#b0f709",
     "terminalCursor.foreground": "#b0f709",
     "editor.findMatchBackground": "#00000000", // 現在の検索一致結果の表示色
-    "editor.findMatchBorder": "#bee60eef", // 現在の検索一致結果の表示色
-    "editor.findMatchHighlightBackground": "#a8e940", // 検索一致結果の表示色
+    "editor.findMatchBorder": "#cf4c0fef", // 現在の検索一致結果の表示色
+    "editor.findMatchHighlightBackground": "#e28e2d", // 検索一致結果の表示色
+    "editor.lineHighlightBackground": "#292e33", // カーソル行の背景色
+    "editorSuggestWidget.selectedBackground": "#2c4747", // 補完候補の選択中の色
   },
   "highlight-matching-tag.enabled": true,
   // 画面の透過設定
@@ -143,5 +150,8 @@
     "vue": "html",
     "vue": "css",
   },
-  "git.ignoreLegacyWarning": true
+  "git.ignoreLegacyWarning": true,
+  "editor.codeActionsOnSave": true,
+  "editor.formatOnSave": true,
+  "editor.tabCompletion": "on"
 }
